@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAIKI向け提案分析レポート</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Meiryo, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        pre code {
+            background-color: transparent;
+            color: #ecf0f1;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 30px 0;
+        }
+        strong {
+            color: #e74c3c;
+        }
+        .summary-box {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<h1>NAIKI向け提案分析レポート</h1><br><br><h2>エグゼクティブサマリー</h2><br><br>ナイキ株式会社（オフィス家具メーカー）の営業プロセスを分析し、デジタル化による効率化の提案をまとめた。特に「製品選定から図面作成」の工程に大きな改善余地があることが判明。<br><br><hr><br><br><h2>🔍 重要なファクト</h2><br><br><h3>ファクト1: 営業プロセスのボトルネック</h3><br><br><strong>現状</strong>: ヒアリング→図面作成→提案のサイクルに時間がかかり、修正を3～5回繰り返す<br><br>#### 📊 プロセスの詳細分解<br><br><pre><code><br>【第1サイクル】初回提案まで（約3週間）<br>├─ Day 1-2: ヒアリング（2日）<br>│   └─ 課題: その場で概算見積もりが出せない<br>│<br>├─ Day 3-5: 製品選定（3日）<br>│   └─ 課題: 70万点のDBから選定、属人的<br>│<br>├─ Day 6-10: 図面作成（5日）<br>│   └─ 課題: デザイナー不足で待ち時間発生<br>│<br>├─ Day 11-14: 3Dパース作成（4日）<br>│   └─ 課題: 外注コスト高、時間かかる<br>│<br>└─ Day 15-18: 見積書作成（4日）<br>    └─ 課題: 手作業、転記ミス<br><br>【第2サイクル以降】修正対応<br>├─ フィードバック受領<br>├─ 修正作業（5日）<br>└─ 再提案（2日）<br>→ これを3～5回繰り返す<br></code></pre><br><br>#### ⚠️ 主要ボトルネック<br><br><tr><td>ボトルネック</td><td>所要時間</td><td>原因</td></tr><br><tr><td><hr><hr><hr><hr>-</td><td><hr><hr><hr>-</td><td><hr><hr></td></tr><br><tr><td>製品選定の属人化</td><td>9～15日</td><td>70万点から経験と勘で選ぶ</td></tr><br><tr><td>図面・3Dパース作成待ち</td><td>27～45日</td><td>デザイナー不足、外注待ち</td></tr><br><tr><td>見積書の手作業</td><td>12～20日</td><td>手入力、転記ミス</td></tr><br><tr><td>修正サイクルの多さ</td><td>3～5回</td><td>その場で代替案提示不可</td></tr><br><br><hr><br><br><h2>🔄 各工程のインプット・アウトプット分析</h2><br><br><h3>工程1: ヒアリング</h3><br><pre><code><br>INPUT              PROCESS           OUTPUT<br>─────────────────────────────────────────────<br>• 問い合わせ内容    • 訪問・実測      • ヒアリングシート<br>• 取引履歴         • 要望聴取        • 写真（スマホ）<br>                  • 予算確認        • 手書きメモ<br><br>⚠️ 課題: 情報が非構造化、概算見積もり不可<br></code></pre><br><br><h3>工程2: 製品選定</h3><br><pre><code><br>INPUT                   PROCESS              OUTPUT<br>──────────────────────────────────────────────────<br>• ヒアリングシート      • カタログ検索       • 候補製品リスト<br> （非構造化）          • 価格確認           （Excel/手書き）<br>• 70万点DB            • 在庫確認          • カタログコピー<br>• 営業の経験・勘       • 類似品比較        • メモ書き<br><br>⚠️ 課題: 属人的、在庫確認に時間、最適解不明<br>💡 機会: 条件入力で自動抽出、リアルタイム在庫表示<br></code></pre><br><br><h3>⚡ プレレイアウト工程（提案：新規挿入）</h3><br><br><strong>現状の問題</strong>:<br>製品リスト（Excel/手書き） → デザイナーが意図を推測 → 何度も確認・修正<br><br><strong>提案</strong>: 営業が簡易ツールでレイアウト作成<br><pre><code><br>┌──────────────────────────────────────┐<br>│ 【新工程】プレレイアウト（デジタル） │<br>├──────────────────────────────────────┤<br>│ INPUT: ヒアリング情報、選定製品      │<br>│ PROCESS: 簡易ツールで配置、AI提案    │<br>│ OUTPUT: 構造化データ、2D/3D、見積    │<br>│ 効果: 営業が自分で作成、8日→2日     │<br>└──────────────────────────────────────┘<br></code></pre><br><br><h3>工程3以降</h3><br>- 図面作成: 構造化データを受け取り仕上げ作業に専念<br>- 3Dパース: リアルタイムレンダリング（WebGL）<br>- 見積書: 製品選択→自動計算<br><br><hr><br><br><h2>🛒 商品選定の5つの困りごと</h2><br><br><h3>1. 膨大な製品から探す作業</h3><br>- <strong>70万点</strong>のDBから探す<br>- 検索軸が多い（サイズ、価格、色、材質、機能、納期...）<br>- <strong>例</strong>: 「20名、予算300万円、ナチュラル」→ <strong>3時間以上</strong><br><br><h3>2. 在庫・納期確認の待ち時間</h3><br><pre><code><br>営業が問い合わせ → 生産部門が確認（待ち）<br>→ 回答（数時間～1日） → 「在庫なし」<br>→ 振り出しに戻る<br></code></pre><br><br><h3>3. 価格計算の煩雑さ</h3><br>- 定価 → 顧客ランク割引 → キャンペーン → まとめ買い → 配送費<br>- 製品ごとに価格体系が異なる<br>- 手計算でミスのリスク<br><br><h3>4. 最適な組み合わせの判断</h3><br><br><strong>カタログ調査から判明した重要な発見</strong>:<br><pre><code><br>基本: デスク5種 × チェア5種 = 25パターン<br><br>さらに複雑化:<br>+ ついたて/パーティション: 10種類以上<br>  - 高さ（ロー/ハイ）<br>  - 素材（布/アクリル/スチール）<br>  - 色・デザイン<br>+ 収納、配線、天板色、脚タイプ...<br><br>→ 実質的に組み合わせは無限<br></code></pre><br><br><strong>セット販売でさえカスタマイズ余地が大きい</strong>:<br>- 「〇〇シリーズのオフィスセット」として売られていても<br>- <strong>ついたてを変えるだけで印象が大きく変わる</strong><br>- 顧客は「基本はこれだけど、ここだけ変えたい」と言う<br><br><strong>ビジュアルイメージが重要</strong>:<br>- ついたての有無や高さでオープン感が変わる<br>- 色の組み合わせで雰囲気が全く異なる<br>- <strong>カタログの静的な写真だけでは顧客がイメージできない</strong><br><br><h3>5. 曖昧な要望の解釈</h3><br>- 「おしゃれ」→ モダン？北欧風？<br>- 「機能的」→ 収納力？可動性？<br>- 顧客自身も明確でない<br><br><hr><br><br><h2>💡 デジタルツールの必要性</h2><br><br><h3>従来（カタログ）の限界</h3><br><pre><code><br>「Aセット」「Bセット」の写真を見せる<br>↓<br>「ついたてはこんな種類があります」と別ページ<br>↓<br>顧客は頭の中で組み合わせを想像するしかない<br></code></pre><br><br><h3>デジタルツールで実現できること</h3><br><pre><code><br>「Aセット」を表示<br>↓<br>ついたてを選択 → リアルタイムで見た目が変わる<br>↓<br>高さを変える → 印象の変化を確認<br>↓<br>色を変える → 雰囲気の違いを比較<br>↓<br>その場で「これだ！」と決められる<br></code></pre><br><br><hr><br><br><h2>📐 簡易図面作成に必要な情報とツール</h2><br><br><h3>必要な情報</h3><br><br>#### オフィス情報<br>- <strong>必須</strong>: 幅・奥行き・天井高（mm単位）<br>- <strong>便利</strong>: 壁・柱・窓・ドア・コンセント位置<br><br>#### 製品情報<br>- <strong>必須</strong>: 製品名、サイズ、数量<br>- <strong>便利</strong>: 形状データ、重量、配線<br><br>#### 制約条件<br>- 動線（通路1m以上）<br>- 部署配置<br>- 視線・プライバシー配慮<br><br><h3>必要なツール機能</h3><br><br>#### A. 間取り作成<br>- 矩形の部屋作成、壁・柱配置<br>- グリッド表示、スナップ機能<br><br>#### B. 製品配置<br>- ドラッグ&ドロップ、回転<br>- 等間隔配置、壁沿い配置<br>- <strong>セット一括配置</strong><br><br>#### C. 組み合わせ試行（重要！）<br>- <strong>ついたて/パーティションの付け替え</strong><br>- 天板色・チェアの入れ替え<br>- <strong>リアルタイムでビジュアル更新</strong><br><br>#### D. 2D表示・出力<br>- 平面図、寸法線<br>- PDF/DXF出力<br><br>#### E. 見積もり計算<br>- 自動計算、割引適用<br>- <strong>オプション変更時の差額表示</strong><br><br><hr><br><br><h2>🎯 具体的な提案：プレレイアウトツールMVP</h2><br><br><h3>Phase 1: 最小機能（50～80万円、2ヶ月）</h3><br><br>#### 機能<br>1. <strong>間取り入力</strong><br>   - 矩形の部屋（幅・奥行き入力）<br>   - 壁の配置<br><br>2. <strong>製品選定サポート</strong><br>   - 条件検索（予算、サイズ、カテゴリ）<br>   - <strong>セット商品の選択</strong><br>   - 製品リスト表示<br><br>3. <strong>製品配置</strong><br>   - ドラッグ&ドロップ<br>   - 回転、移動、削除<br>   - <strong>セット一括配置</strong><br><br>4. <strong>組み合わせ試行機能（カタログ調査から判明した必須機能）</strong><br>   - <strong>ついたて/パーティションの付け替え</strong><br>     - 高さ選択（ロー/ハイ）<br>     - 素材選択（布/アクリル/スチール）<br>     - 色選択<br>   - 天板色の変更<br>   - チェアの入れ替え<br>   - <strong>変更するとビジュアルが更新される</strong><br><br>5. <strong>2D表示</strong><br>   - 平面図表示<br>   - 寸法表示<br>   - ついたての表現（高さで色分け）<br><br>6. <strong>見積もり自動計算</strong><br>   - 製品単価×数量<br>   - 合計金額表示<br>   - <strong>オプション変更時の差額表示</strong><br><br>7. <strong>出力</strong><br>   - PDF出力（平面図+製品リスト+見積）<br>   - Excel出力<br><br>#### 使用技術<br>- フロントエンド: React + Konva.js（2D描画）<br>- バックエンド: Node.js + Express<br>- DB: PostgreSQL（製品データ、セットマスタ、組み合わせマスタ）<br><br>#### この機能で解決される課題<br>- 「ついたてを変えたらどう見えるか」→ <strong>その場で確認</strong><br>- 「セット + カスタマイズ」→ <strong>ベースはセット、細部は調整</strong><br>- 「組み合わせ無限問題」→ <strong>顧客が自分で試せる</strong><br><br><hr><br><br><h3>Phase 2: 拡張機能（+30～50万円、1ヶ月）</h3><br><br>1. 壁・柱・窓・ドアの詳細配置<br>2. 等間隔配置、壁沿い配置などのスナップ機能<br>3. DXF出力（AutoCAD連携）<br>4. <strong>複数パターン（A案・B案・C案）の保存・並べて比較</strong><br>5. 製品レコメンド機能<br>6. <strong>「変更前/変更後」の比較表示</strong><br><br><hr><br><br><h3>Phase 3: 高度機能（+50～70万円、2ヶ月）</h3><br><br>1. 簡易3Dプレビュー（WebGL）<br>2. 製品の3Dモデル表示<br>3. 顧客向け共有リンク<br>4. 在庫・納期のリアルタイム連携<br>5. AIレイアウト提案<br><br><hr><br><br><h2>📊 投資対効果</h2><br><br><h3>削減効果</h3><br><br><tr><td>項目</td><td>現状</td><td>改善後</td><td>効果</td></tr><br><tr><td><hr><hr></td><td><hr><hr></td><td><hr><hr>--</td><td><hr><hr></td></tr><br><tr><td>製品選定時間</td><td>3時間/案件</td><td>30分/案件</td><td><strong>83%削減</strong></td></tr><br><tr><td>図面作成待ち</td><td>5日</td><td>即日</td><td><strong>5日短縮</strong></td></tr><br><tr><td>見積もり作成</td><td>4日</td><td>即時</td><td><strong>4日短縮</strong></td></tr><br><tr><td>製品選定→図面完成</td><td>8日</td><td>2日</td><td><strong>75%削減</strong></td></tr><br><tr><td>営業の同時担当案件数</td><td>3～5件</td><td>10～15件</td><td><strong>3倍</strong></td></tr><br><tr><td>初回訪問での提案可否</td><td>不可</td><td>可能</td><td><strong>顧客満足度↑</strong></td></tr><br><br><h3>ROI試算</h3><br>- 開発費: 50～150万円<br>- 営業1名の工数削減: 年間100案件 × 8日 = 800日 → 400日（50%削減）<br>- 人件費削減効果: 400日 × 3万円/日 = <strong>年間1,200万円相当</strong><br>- <strong>初年度で投資回収可能</strong><br><br><hr><br><br><h2>🚀 次のステップ</h2><br><br><h3>推奨アプローチ</h3><br><br>#### Step 1: 関係構築（無償～50万円）<br>1. 業界レポート提供<br>2. 営業同行・ヒアリング<br>3. 課題発見ワークショップ<br><br>#### Step 2: 小規模PoC（50～150万円）<br>1. 主力製品カテゴリでプロトタイプ作成<br>2. 営業担当者3名に試用（1ヶ月）<br>3. フィードバック収集・改善<br><br>#### Step 3: 本格展開（状況に応じて）<br>1. 全製品への展開<br>2. 機能拡張（3D、AI、在庫連携）<br>3. 他部門への展開<br><br><hr><br><br><h2>まとめ</h2><br><br><h3>核心的な発見</h3><br><br>1. <strong>営業プロセスの可視化</strong>: 製品選定→図面作成の間に大きな断絶<br>2. <strong>組み合わせ無限問題</strong>: セット販売でも、ついたて等の変更で印象が激変<br>3. <strong>ビジュアル化の重要性</strong>: カタログの静止画では限界、リアルタイム試行が必須<br>4. <strong>デジタルツールの価値</strong>: 「セット + カスタマイズ」を両立し、意思決定を加速<br><br><h3>差別化ポイント</h3><br><br><strong>大手</strong>: 高度なAI、複雑なシステム<br><strong>NAIKI</strong>: <strong>シンプルで使いやすい、組み合わせが自由に試せる実用ツール</strong><br><br>中小企業向け「100人オフィス戦略」にマッチした、親しみやすいデジタル体験を提供。<br><br><hr><br><br>*本レポートは、オフィス家具業界のWeb調査、カタログ分析、および営業プロセスの理論的分析に基づいて作成されました。*<br>
+    </div>
+</body>
+</html>
